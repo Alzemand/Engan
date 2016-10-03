@@ -14,14 +14,14 @@ import model.Acoes;
 
 /**
  *
- * @author victor
+ *
  */
 
 
 
 public class guiAcoes extends javax.swing.JFrame {
 
-//private Acoes livro = new Acoes();
+//private Acoes acoes = new Acoes();
  
     private Object valorAcoes;
 
@@ -151,10 +151,11 @@ public class guiAcoes extends javax.swing.JFrame {
        String nome = txtName.getText();
        String Valor = txtvalor.getText();
        //System.out.println(txtName.getText());
-       Acoes livro = new Acoes();
-       livro.adicionarDados(nome, Valor);
-       daoAcoes.adicionar(livro);
+       Acoes acoes = new Acoes();
+       acoes.adicionarDados(nome, Valor);
+       daoAcoes.adicionar(acoes);
        listaacoes.setListData(daoAcoes.getAcoes().toArray());
+      
     }//GEN-LAST:event_bntGravarActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
