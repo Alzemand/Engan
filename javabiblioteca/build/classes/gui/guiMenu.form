@@ -94,7 +94,10 @@
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-                                          <Component id="ShowClientes" min="-2" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="btnnegociacao" min="-2" pref="114" max="-2" attributes="0"/>
+                                              <Component id="ShowClientes" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
                                   </Group>
                               </Group>
@@ -119,10 +122,7 @@
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                   </Group>
@@ -141,7 +141,10 @@
                   <Component id="ShowClientes" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btnempresa" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnempresa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnnegociacao" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="btngenero" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -230,6 +233,14 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Seu lucro, no caso..."/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnnegociacao">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Negociacao"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnnegociacaoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

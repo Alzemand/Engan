@@ -40,6 +40,7 @@ public class guiMenu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        btnnegociacao = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -98,6 +99,13 @@ public class guiMenu extends javax.swing.JFrame {
         jLabel4.setText("Gerenciando suas ações com sabedoria, sempre pensando no lucro...");
 
         jLabel5.setText("Seu lucro, no caso...");
+
+        btnnegociacao.setText("Negociacao");
+        btnnegociacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnnegociacaoActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -158,7 +166,9 @@ public class guiMenu extends javax.swing.JFrame {
                                             .addComponent(jLabel4))
                                         .addGroup(layout.createSequentialGroup()
                                             .addGap(71, 71, 71)
-                                            .addComponent(ShowClientes))))))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(btnnegociacao, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(ShowClientes)))))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -173,9 +183,7 @@ public class guiMenu extends javax.swing.JFrame {
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel3))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2)))
+                            .addComponent(jLabel2))
                         .addGap(1, 1, 1))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -189,7 +197,9 @@ public class guiMenu extends javax.swing.JFrame {
                     .addComponent(btncliente)
                     .addComponent(ShowClientes))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnempresa)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnempresa)
+                    .addComponent(btnnegociacao))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btngenero)
@@ -251,6 +261,11 @@ public class guiMenu extends javax.swing.JFrame {
         telashowcliente.setVisible(true);
     }//GEN-LAST:event_ShowClientesActionPerformed
 
+    private void btnnegociacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnnegociacaoActionPerformed
+        guiNegociacao telanegociacao = new guiNegociacao();
+        telanegociacao.setVisible(true);
+    }//GEN-LAST:event_btnnegociacaoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -293,6 +308,7 @@ public class guiMenu extends javax.swing.JFrame {
     private javax.swing.JButton btnempresa;
     private javax.swing.JButton btngenero;
     private javax.swing.JButton btnlivro;
+    private javax.swing.JButton btnnegociacao;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
