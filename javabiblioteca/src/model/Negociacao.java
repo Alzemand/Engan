@@ -18,8 +18,6 @@ public class Negociacao implements ManipulaNegociacao{
     private Cliente cliente;
     private List<Acoes> acoes;
     private Calendar data;
-    private Calendar dataPrevistaDevolucao;
-    private Calendar dataDevolucao;
 
     public Negociacao(Cliente cliente, Acoes acoes) {
         this.cliente = cliente;
@@ -28,8 +26,6 @@ public class Negociacao implements ManipulaNegociacao{
         
         data = Calendar.getInstance();
         
-        dataPrevistaDevolucao = Calendar.getInstance();
-        dataPrevistaDevolucao.add(Calendar.DAY_OF_MONTH, 7);
         
         
     }
@@ -46,14 +42,6 @@ public class Negociacao implements ManipulaNegociacao{
         return data;
     }
 
-    public Calendar getDataPrevistaDevolucao() {
-        return dataPrevistaDevolucao;
-    }
-
-    public Calendar getDataDevolucao() {
-        return dataDevolucao;
-    }
-
     @Override
     public void adicionar(Object objeto) {
         acoes.add((Acoes) objeto);
@@ -63,11 +51,6 @@ public class Negociacao implements ManipulaNegociacao{
     public void remover(Object objeto) {
         acoes.remove((Acoes) objeto);
     }
-    
-    public void finalizarEmprestimo() {
-        this.dataDevolucao = Calendar.getInstance();
-    }
-    
     
     @Override
     public String toString() {

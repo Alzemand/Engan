@@ -62,7 +62,7 @@ public class Acoes  {
 
     @Override
     public String toString() {
-        return this.nome + "-"+this.valor ;
+        return this.nome + "- R$"+this.valor ;
     }
 
     

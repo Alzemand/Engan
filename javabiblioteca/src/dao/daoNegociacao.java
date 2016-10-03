@@ -30,15 +30,6 @@ public class daoNegociacao {
         return negociacoes;
     }
 
-    public static List<Negociacao> getNegociacaoEmAberto() {
-        List<Negociacao> l = new ArrayList();
-        for (Negociacao e: negociacoes) {
-            if (e.getDataDevolucao()==null) {
-                l.add(e);
-            }
-        }
-        
-        return l;
-    }
+    
 
 }
