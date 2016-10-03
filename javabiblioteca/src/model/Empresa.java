@@ -10,21 +10,21 @@ package model;
  *
  * @author acg
  */
-public class Autor {
+public class Empresa {
     private String nome;
-    private String sobreNome;
+    private String CNPJ;
 
-    public Autor(String nome, String sobreNome) {
+    public Empresa(String nome, String CNPJ) {
         this.nome = nome;
-        this.sobreNome = sobreNome;
+        this.CNPJ = CNPJ;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getSobreNome() {
-        return sobreNome;
+    public String getCNPJ() {
+        return CNPJ;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class Autor {
         
         //toUppercase - maiusculo 
         //toLowercase - minusculo
-        return this.nome.toUpperCase() + ", " + this.sobreNome.toLowerCase();
+        return this.nome.toUpperCase() + ", " + this.CNPJ.toLowerCase();
     }
 
     

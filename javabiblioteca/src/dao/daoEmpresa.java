@@ -7,25 +7,25 @@ package dao;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Autor;
+import model.Empresa;
 
 /**
  *
  * @author victor
  */
-public class daoAutor {
-     private static List<Autor> autores= new ArrayList();
+public class daoEmpresa {
+     private static List<Empresa> empresas= new ArrayList();
 
-    public static void adicionar(Autor autor) {
-        autores.add(autor);
+    public static void adicionar(Empresa empresa) {
+        empresas.add(empresa);
     }
     
-    public static void remover(Autor autor) {
-        autores.remove(autor);
+    public static void remover(Empresa empresa) {
+        empresas.remove(empresa);
     }
 
-    public static List<Autor> getAutores() {
-        return autores;
+    public static List<Empresa> getEmpresas() {
+        return empresas;
     }
     
     // O motivo de utilizar esse for , é converter o a lista em String ;
@@ -34,8 +34,8 @@ public class daoAutor {
      @Override
      public String toString(){
         String retornadado = "vazio";
-        for(int i=0;this.autores.get(i) != null;i++){
-            retornadado = this.autores.get(i).getNome() + " " +this.autores.get(i).getSobreNome() +";";
+        for(int i=0;this.empresas.get(i) != null;i++){
+            retornadado = this.empresas.get(i).getNome() + " " +this.empresas.get(i).getCNPJ() +";";
     }
         return retornadado;
     }

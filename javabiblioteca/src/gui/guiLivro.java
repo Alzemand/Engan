@@ -5,12 +5,12 @@
  */
 package gui;
 
-import dao.daoAutor;
+import dao.daoCliente;
 import dao.daoGenero;
 import dao.daoLivro;
 import java.util.List;
 import javax.swing.ComboBoxModel;
-import model.Autor;
+import model.Cliente;
 import model.Genero;
 import model.Livro;
 
@@ -88,6 +88,11 @@ public class guiLivro extends javax.swing.JFrame {
         comboGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         comboAutor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboAutor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboAutorActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Autor");
 
@@ -187,10 +192,10 @@ public class guiLivro extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         // peguei um objeto , tipo lista de autor;
-        List <Autor> listaautor = daoAutor.getAutores();
+        List <Cliente> listacliente = daoCliente.getClientes();
         List<Genero> listagenero = daoGenero.getGeneros();
         comboAutor.removeAllItems();
-        for(Autor autor:listaautor)
+        for(Cliente autor:listacliente)
             comboAutor.addItem(autor.getNome().toString());
         //comboGenero.setModel((ComboBoxModel<String>) listagenero);
         comboGenero.removeAllItems();
@@ -203,6 +208,10 @@ public class guiLivro extends javax.swing.JFrame {
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
+
+    private void comboAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboAutorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboAutorActionPerformed
                           
     /**
      * @param args the command line arguments

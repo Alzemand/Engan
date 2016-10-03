@@ -17,10 +17,10 @@ public class Livro  {
 
     private String isbn;
     private String nome;
-    private List<Autor> autores;
+    private List<Cliente> autores;
     private Genero genero;
 
-    public Livro(String nome,String isbn, List <Autor> autores, Genero genero) {
+    public Livro(String nome,String isbn, List <Cliente> autores, Genero genero) {
         this.isbn = isbn;
         this.nome = nome;
         this.autores = autores;
@@ -45,19 +45,19 @@ public class Livro  {
         return nome;
     }
 
-    public List<Autor> getAutores() {
+    public List<Cliente> getAutores() {
         return autores;
     }
 
     
     public void adicionar(Object objeto) {
-        autores.add((Autor) objeto);
+        autores.add((Cliente) objeto);
 
     }
 
     
     public void remover(Object objeto) {
-        autores.remove((Autor) objeto);
+        autores.remove((Cliente) objeto);
 
     }
 

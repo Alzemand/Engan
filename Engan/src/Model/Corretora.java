@@ -11,5 +11,24 @@ package Model;
  */
 public class Corretora {
     Integer cnpj;
+    String nome;
+
+    public Integer getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(Integer cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    
+    
     
 }

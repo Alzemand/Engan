@@ -5,48 +5,37 @@
  */
 package model;
 
+
 /**
  *
  * @author acg
  */
-public abstract class Cliente {
-    protected Integer numero;
-    protected String nome;
-    protected String cpf;
-    private static Integer proximoNumero = 1;
+public class Cliente {
+    private String nome;
+    private String Matricula;
 
-    public Cliente(String nome, String cpf) {
+    public Cliente(String nome, String Matricula) {
         this.nome = nome;
-        this.cpf = cpf;
-        this.numero = proximoNumero;
-        proximoNumero++;
-    }
-
-    
-    
-    
-    
-    public Integer getNumero() {
-        return numero;
+        this.Matricula = Matricula;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getMatricula() {
+        return Matricula;
     }
 
-    public String getCpf() {
-        return cpf;
+    @Override
+    public String toString() {
+        
+        //toUppercase - maiusculo 
+        //toLowercase - minusculo
+        return this.nome.toUpperCase() + ", " + this.Matricula.toLowerCase();
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
     
-    
-    
+   
     
 }

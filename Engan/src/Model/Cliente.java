@@ -3,31 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model;
-
-/**
- *
- * @author edilson
- */
-public class Cliente {
+public class Cliente{
     private String nome;
-    private Integer matricula;
+    private String matricula;
+
+    public Cliente(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Integer getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(Integer matricula) {
-        this.matricula = matricula;
+    @Override
+    public String toString() {
+        
+        //toUppercase - maiusculo 
+        //toLowercase - minusculo
+        return this.nome.toUpperCase() + ", " + this.matricula.toLowerCase();
     }
+
+    
    
     
 }
